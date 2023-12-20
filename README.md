@@ -7,7 +7,7 @@ Boilerplate for a project using Electron, React and Typescript.
 Use a package manager of your choice (npm, yarn, etc.) in order to install all dependencies
 
 ```bash
-yarn
+npm install
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ yarn
 Just run `start` script.
 
 ```bash
-yarn start
+npm start
 ```
 
 ## Packaging
@@ -23,7 +23,7 @@ yarn start
 To generate the project package based on the OS you're running on, just run:
 
 ```bash
-yarn package
+npm package
 ```
 
 ## Contributing
