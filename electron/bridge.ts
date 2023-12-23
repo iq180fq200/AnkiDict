@@ -18,7 +18,12 @@ export const api = {
    */
   on: (channel: string, callback: Function) => {
     ipcRenderer.on(channel, (_, data) => callback(data))
+  },
+
+  explain: (context: string, phrase: string[]) => {
+    return ipcRenderer.invoke('explain',context,phrase)
   }
+
 }
 
 contextBridge.exposeInMainWorld('Main', api)

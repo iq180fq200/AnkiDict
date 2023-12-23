@@ -1,4 +1,5 @@
 import { app, BrowserWindow, ipcMain } from 'electron'
+import {handleExplain} from "./explainer";
 
 let mainWindow: BrowserWindow | null
 
@@ -37,6 +38,11 @@ async function registerListeners () {
   ipcMain.on('message', (_, message) => {
     console.log(message)
   })
+
+  /**
+   * ask gpt for context-aware explanation and return the result
+   */
+  ipcMain.handle('explain', handleExplain)
 }
 
 app.on('ready', createWindow)
